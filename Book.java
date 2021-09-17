@@ -29,6 +29,9 @@ class Book
         refNumber = "";
     }
 
+    /**
+     * Set the Referance number
+     */ 
     public void setRefNumber(String ref)
     {
         if(ref.length() > 3)
@@ -39,52 +42,82 @@ class Book
             System.out.println("Invalid referance number: Must be at least 3 characters long");
         }
     }
-    
+
+    /**
+     * Add one to the number of times this book has been borrowed
+     */
     public void borrow()
     {
         borrowed++;
     }
 
+    /**
+     * @Return the author
+     */
     public String getAuthor()
     {
         return author;
     }
 
+    /**
+     * @Return the title
+     */
     public String getTitle()
     {
         return title;
     }
 
+    /**
+     * @Return the number of pages
+     */
     public int getPages()
     {
         return pages;
     }
 
+    /** 
+     * @Return the referance number
+     */
     public String getRefNumber()
     {
         return refNumber;
     }
-    
+
+    /**
+     * @Return the number of times this book has been borrowed
+     */
     public int getBorrowed()
     {
         return borrowed;
     }
 
+    /**
+     * @Returns whether this book is a textbook for a class
+     */
     public boolean isCourseText()
     {
         return courseText;
     }
-    
+
+    /**
+     * Print the author
+     */
     public void printAuthor()
     {
         System.out.println("Book Author: " + author);
     }
 
+    /**
+     * Print the title
+     */
     public void printTitle()
     {
         System.out.println("Book Title: " + title);
     }
 
+    /**
+     * Print the book details
+     */
     public void printDetails()
     {
         System.out.println("++++++++++++++");
@@ -99,7 +132,7 @@ class Book
         {
             System.out.println("Referance Number: ZZZ");
         }
-                System.out.println("This book has been borrowed " + borrowed + " times");
+        System.out.println("This book has been borrowed " + borrowed + " times");
         System.out.println("++++++++++++++");
     }
 
