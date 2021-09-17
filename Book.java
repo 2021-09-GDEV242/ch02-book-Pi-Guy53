@@ -25,49 +25,57 @@ class Book
         pages = bookPages;
         refNumber = "";
     }
-    
+
     public void setRefNumber(String ref)
     {
         refNumber = ref;
     }
-    
+
     public String getAuthor()
     {
         return author;
     }
-    
+
     public String getTitle()
     {
         return title;
     }
-    
+
     public int getPages()
     {
         return pages;
     }
-    
+
     public String getRefNumber()
     {
         return refNumber;
     }
-    
+
     public void printAuthor()
     {
         System.out.println("Book Author: " + author);
     }
-    
+
     public void printTitle()
     {
         System.out.println("Book Title: " + title);
     }
-    
+
     public void printDetails()
     {
         System.out.println("++++++++++++++");
         System.out.println(title);
         System.out.println("By: " + author);
         System.out.println("Number of pages: " + pages);
+        if (refNumber.length() > 0)
+        {
+            System.out.println("Referance Number: " + refNumber);
+        }
+        else
+        {
+            System.out.println("Referance Number: ZZZ");
+        }
         System.out.println("++++++++++++++");
     }
-    
+
 }
