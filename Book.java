@@ -13,6 +13,7 @@ class Book
     private String title;
     private int pages;
     private String refNumber;
+    private int borrowed;
 
     /**
      * Set the author and title fields when this object
@@ -36,6 +37,11 @@ class Book
             System.out.println("Invalid referance number: Must be at least 3 characters long");
         }
     }
+    
+    public void borrow()
+    {
+        borrowed++;
+    }
 
     public String getAuthor()
     {
@@ -55,6 +61,11 @@ class Book
     public String getRefNumber()
     {
         return refNumber;
+    }
+    
+    public int getBorrowed()
+    {
+        return borrowed;
     }
 
     public void printAuthor()
@@ -81,6 +92,7 @@ class Book
         {
             System.out.println("Referance Number: ZZZ");
         }
+                System.out.println("This book has been borrowed " + borrowed + " times");
         System.out.println("++++++++++++++");
     }
 
